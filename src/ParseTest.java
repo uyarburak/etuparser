@@ -22,7 +22,7 @@ public class ParseTest {
 		URL url = new URL(String.format("http://kayit.etu.edu.tr/rapor/x%02d.php", number));
 		URLConnection conn = url.openConnection();
 
-		BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+		BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "iso-8859-9"));
 		String line;
 		while ((line = rd.readLine()) != null) {
 			page.append(line+"\n");
