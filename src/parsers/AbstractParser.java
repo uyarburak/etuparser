@@ -90,6 +90,11 @@ public abstract class AbstractParser {
 				for (Integer i : indices) {
 					object.put(columns[i], atts.get(i).text());
 				}
+				if(atts.get(primaryIndex).text().isEmpty()){
+					System.out.println("WTF");
+					System.out.println(element.html());
+					System.out.println(iter.next().html());
+				}
 				map.put(atts.get(primaryIndex).text(), object);
 			}
 			for (Map.Entry<String, Integer[]> entry : types.entrySet()) {
